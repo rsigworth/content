@@ -968,7 +968,7 @@ jobs:
       - when:
           condition:
             equal:
-              - master
+              - upload-flow-dev
               - << pipeline.git.branch >>
           steps:
             - run:
@@ -1249,7 +1249,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - upload-flow-dev
           requires:
             - Setup Environment
       - Force Upload Packs To Marketplace:
@@ -1257,7 +1257,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - upload-flow-dev
           requires:
             - Create Instances
 
